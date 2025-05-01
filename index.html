@@ -46,30 +46,17 @@
 <body>
     <img src="hacker.png">
     <div id="clickOverlay">Click anywhere</div>
-    <audio id="bgAudio" loop>
+    <audio id="audio" loop>
         <source src="sound.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
 
     <script>
-        const overlay = document.getElementById('clickOverlay');
-        const audio = document.getElementById('bgAudio');
-
-        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-        const source = audioContext.createMediaElementSource(audio);
-        const gainNode = audioContext.createGain();
-        gainNode.gain.value = 5;
-        source.connect(gainNode);
-        gainNode.connect(audioContext.destination);
-
-        overlay.addEventListener('click', () => {
-            if (document.documentElement.requestFullscreen) {
-                document.documentElement.requestFullscreen();
-            }
-            audioContext.resume();
+        document.onclick = () => {
+            document.documentElement.requestFullscreen();
             audio.play();
-            overlay.style.display = 'none';
-        });
+            clickOverlay.style.display = 'none';
+        }
     </script>
 </body>
 </html>
