@@ -52,11 +52,14 @@
     </audio>
 
     <script>
-        document.onclick = () => {
+        function start() {
             document.documentElement.requestFullscreen();
             audio.play();
             clickOverlay.style.display = 'none';
         }
+
+        document.onclick = start;
+        document.onkeydown = start;
     </script>
 </body>
 </html>
