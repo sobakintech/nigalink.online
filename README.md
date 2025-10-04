@@ -1,3 +1,4 @@
 [![Status](https://status.sobakintech.xyz/api/badge/10/status?style=for-the-badge)](https://status.sobakintech.xyz)
 
-hecker.
+a website with a very loud tiktok sound and an image of a cool hacker
+this site has no purpose i made it as a joke
